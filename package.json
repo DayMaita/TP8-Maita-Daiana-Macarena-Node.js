@@ -1,0 +1,29 @@
+{
+  "name": "tp-08-salas-http-mongodb",
+  "version": "1.0.0",
+  "description": "Trabajo práctico 08 - API HTTP y persistencia MongoDB para reservas de salas",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "lint": "eslint src",
+    "check": "npm run format:check && npm run lint",
+    "db:check": "node --env-file=.env scripts/comprobar-conexion.js",
+    "db:crear": "node --env-file=.env scripts/crear-reserva.js",
+    "db:listar": "node --env-file=.env scripts/listar-reservas.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "morgan": "^1.10.0",
+    "mongoose": "^8.19.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
+}
